@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tipos de Datos</title>
+</head>
+<body>
+    <h1>Hola</h1>
+    <script>
+// numero secreto juego
+//numero máximo
+
+var max=100;
+
+//numero mínimo
+
+var min=1;
+
+var numero_secreto = Math.random() * (max-min) +  1;
+console.log(numero_secreto);
+        
+numero_secreto = parseInt(numero_secreto);
+        var mensaje="Ingresa un número para adivinar el número mágico"
+
+while(true){
+     var numero_del_usuario= prompt(mensaje, "0"); 
+      numero_del_usuario = parseInt(numero_del_usuario);
+      if(numero_del_usuario === numero_secreto){
+      alert("Ganaste! adivinaste el número secreto");
+  break;
+  }
+  else if (numero_del_usuario===0){
+    break;
+}
+else if (numero_del_usuario > numero_secreto){
+  mensaje="Lo sentimos, el número que ingresaste es mayor al numero mágico";
+}
+else if (numero_del_usuario < numero_secreto){
+  mensaje= "Lo sentimos, el número que ingresaste es menor al numero mágico";
+      }
+}
+
+</script>
+
+</body>
+</html>
